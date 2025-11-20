@@ -1,3 +1,13 @@
+<!--
+
+run in 
+
+http://workspace.featurize.cn:14432/zh
+
+with turn off vpn in firefox
+
+-->
+
 # Chatbot Ollama
 
 ## About
