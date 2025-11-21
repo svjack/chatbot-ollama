@@ -170,7 +170,7 @@ export const ChatInput = ({
         text = data.text || '';
         pages = data.pages;
         kind = 'pdf';
-      } else if (file.type.startsWith('text/') || name.endsWith('.txt') || name.endsWith('.md') || name.endsWith('.markdown')) {
+      } else if (file.type.startsWith('text/') || name.endsWith('.txt') || name.endsWith('.md') || name.endsWith('.markdown') || name.endsWith('.json')) {
         text = await file.text();
         kind = name.endsWith('.md') || name.endsWith('.markdown') ? 'markdown' : 'text';
       } else {
@@ -475,13 +475,13 @@ export const ChatInput = ({
                 onFileSelect={handleFileSelect}
                 onFileRemove={() => setSelectedFile(null)}
                 selectedFile={selectedFile || undefined}
-                accept={'.pdf,.txt,.md,.markdown'}
+                accept={'.pdf,.txt,.md,.markdown,.json'}
                 maxSize={50 * 1024 * 1024}
                 validateFile={(f) => {
                   const allowed = ['application/pdf', 'text/plain', 'text/markdown'];
                   const n = f.name.toLowerCase();
-                  if (allowed.includes(f.type) || n.endsWith('.pdf') || n.endsWith('.txt') || n.endsWith('.md') || n.endsWith('.markdown')) return null;
-                  return 'Unsupported file type (allowed: pdf, txt, md)';
+                  if (allowed.includes(f.type) || n.endsWith('.pdf') || n.endsWith('.txt') || n.endsWith('.md') || n.endsWith('.markdown') ||  n.endsWith('.json')) return null;
+                  return 'Unsupported file type (allowed: pdf, txt, md, json)';
                 }}
               />
             </div>
