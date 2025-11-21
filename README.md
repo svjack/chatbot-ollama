@@ -70,7 +70,7 @@ docker run -p 3000:3000 ghcr.io/ivanfioravanti/chatbot-ollama:main
 ### 1. Clone Repo
 
 ```bash
-git clone https://github.com/ivanfioravanti/chatbot-ollama.git
+git clone https://github.com/svjack/chatbot-ollama.git
 ```
 
 ### 2. Move to folder
