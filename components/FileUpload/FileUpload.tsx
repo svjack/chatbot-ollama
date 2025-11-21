@@ -142,7 +142,7 @@ export const FileUpload: FC<Props> = ({
               if (selectedFile.type.startsWith('image/')) {
                 return <IconPhoto size={20} className="text-blue-600" />;
               }
-              if (selectedFile.type.startsWith('text/') || n.endsWith('.txt') || n.endsWith('.md') || n.endsWith('.markdown')) {
+              if (selectedFile.type.startsWith('text/') || n.endsWith('.txt') || n.endsWith('.md') || n.endsWith('.markdown') || n.endsWith('.json')) {
                 return <IconFileText size={20} className="text-green-600" />;
               }
               return <IconFile size={20} className="text-neutral-600" />;
